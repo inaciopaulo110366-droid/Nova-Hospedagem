@@ -1,0 +1,273 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Authenticated user account and resource usage summary for NovaHospeda.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 254
+        },
+        "role": {
+          "type": "string",
+          "enum": ["user", "admin"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "suspended"]
+        },
+        "sitesCount": {
+          "type": "integer"
+        },
+        "storageUsedBytes": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "displayName", "email", "role", "status", "sitesCount", "storageUsedBytes", "createdAt", "updatedAt"]
+    },
+    "Site": {
+      "title": "Site",
+      "description": "A hosted static website project under nomedosite.nh.com.br.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 80
+        },
+        "slug": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 48,
+          "pattern": "^[a-z0-9]([a-z0-9\\-]{1,46}[a-z0-9])?$"
+        },
+        "customDomain": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "status": {
+          "type": "string",
+          "enum": ["online", "suspended", "blocked"]
+        },
+        "currentVersionId": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "versionCount": {
+          "type": "integer"
+        },
+        "totalSizeBytes": {
+          "type": "integer"
+        },
+        "entryFile": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "sslEnabled": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["id", "ownerId", "name", "slug", "status", "versionCount", "totalSizeBytes", "entryFile", "sslEnabled", "createdAt", "updatedAt"]
+    },
+    "Deployment": {
+      "title": "Deployment",
+      "description": "Immutable publication snapshot belonging to a Site.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "siteId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "versionNumber": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["published", "archived", "removed"]
+        },
+        "sourceType": {
+          "type": "string",
+          "enum": ["zip", "html", "editor", "files"]
+        },
+        "sizeBytes": {
+          "type": "integer"
+        },
+        "fileCount": {
+          "type": "integer"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["id", "siteId", "ownerId", "versionNumber", "status", "sourceType", "sizeBytes", "fileCount", "createdAt"]
+    },
+    "Announcement": {
+      "title": "Announcement",
+      "description": "Platform-wide administrative notice.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 120
+        },
+        "message": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 600
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["info", "warning", "maintenance"]
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["id", "title", "message", "severity", "active", "createdAt"]
+    },
+    "PlatformSettings": {
+      "title": "PlatformSettings",
+      "description": "Global configurable free-tier quotas and platform rules.",
+      "type": "object",
+      "properties": {
+        "maxSitesPerUser": {
+          "type": "integer"
+        },
+        "maxSiteSizeMb": {
+          "type": "integer"
+        },
+        "allowSignups": {
+          "type": "boolean"
+        },
+        "maintenanceMode": {
+          "type": "boolean"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["maxSitesPerUser", "maxSiteSizeMb", "allowSignups", "maintenanceMode", "updatedAt"]
+    },
+    "AdminRecord": {
+      "title": "AdminRecord",
+      "description": "Authorized platform administrator entry.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 254
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "email", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "Private user account documents indexed by Firebase Auth UID."
+    },
+    "/sites/{siteId}": {
+      "schema": { "$ref": "#/entities/Site" },
+      "description": "Hosted static websites managed by their owners and moderated by admins."
+    },
+    "/sites/{siteId}/deployments/{deploymentId}": {
+      "schema": { "$ref": "#/entities/Deployment" },
+      "description": "Versioned publication snapshots under each site."
+    },
+    "/announcements/{announcementId}": {
+      "schema": { "$ref": "#/entities/Announcement" },
+      "description": "Platform-wide administrative announcements."
+    },
+    "/platformSettings/{settingId}": {
+      "schema": { "$ref": "#/entities/PlatformSettings" },
+      "description": "Global platform free-tier limits and toggles."
+    },
+    "/admins/{uid}": {
+      "schema": { "$ref": "#/entities/AdminRecord" },
+      "description": "Authorized administrator registry."
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "NovaHospeda",
+  "description": "Hospedagem pública gratuita de sites estáticos. Seu site no ar, grátis e sem complicação em nomedosite.nh.com.br.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

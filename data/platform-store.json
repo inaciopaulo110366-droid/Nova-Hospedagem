@@ -1,0 +1,195 @@
+{
+  "users": {
+    "OrzxQG5cLkce6Lj82AuSa4Z04y42": {
+      "uid": "OrzxQG5cLkce6Lj82AuSa4Z04y42",
+      "displayName": "Danilo Venancio",
+      "email": "vdanilo884@gmail.com",
+      "emailVerified": true,
+      "role": "user",
+      "status": "active",
+      "createdAt": "2026-11-16T12:49:22.765Z",
+      "updatedAt": "2026-11-16T17:44:08.582Z",
+      "lastLoginAt": "2026-11-16T17:44:08.582Z"
+    }
+  },
+  "sites": {
+    "site_d43a7e3060bf417a": {
+      "id": "site_d43a7e3060bf417a",
+      "ownerId": "OrzxQG5cLkce6Lj82AuSa4Z04y42",
+      "ownerEmail": "vdanilo884@gmail.com",
+      "name": "Web2appee",
+      "slug": "web2app",
+      "customDomain": "",
+      "status": "online",
+      "currentVersionId": "ver_2_1794850522004",
+      "draftVersionId": "ver_2_1794850522004",
+      "versionCount": 2,
+      "totalSizeBytes": 3916,
+      "fileCount": 3,
+      "entryFile": "index.html",
+      "sslEnabled": true,
+      "createdAt": "2026-11-16T12:51:29.233Z",
+      "updatedAt": "2026-11-16T17:35:22.021Z",
+      "lastPublishedAt": "2026-11-16T17:35:22.021Z"
+    }
+  },
+  "deployments": {
+    "site_d43a7e3060bf417a": [
+      {
+        "id": "ver_2_1794850522004",
+        "siteId": "site_d43a7e3060bf417a",
+        "ownerId": "OrzxQG5cLkce6Lj82AuSa4Z04y42",
+        "versionNumber": 2,
+        "status": "published",
+        "sourceType": "editor",
+        "sizeBytes": 3916,
+        "fileCount": 3,
+        "entryFile": "index.html",
+        "notes": "Publicado via Editor NovaHospeda",
+        "createdAt": "2026-11-16T17:35:22.021Z"
+      },
+      {
+        "id": "ver_1_1794834043073",
+        "siteId": "site_d43a7e3060bf417a",
+        "ownerId": "OrzxQG5cLkce6Lj82AuSa4Z04y42",
+        "versionNumber": 1,
+        "status": "archived",
+        "sourceType": "editor",
+        "sizeBytes": 3916,
+        "fileCount": 3,
+        "entryFile": "index.html",
+        "notes": "Versão inicial publicada para teste no ar",
+        "createdAt": "2026-11-16T13:00:43.096Z"
+      }
+    ]
+  },
+  "analytics": {
+    "site_d43a7e3060bf417a": {
+      "totalVisits": 6,
+      "dailyVisits": {
+        "2026-11-16": 6
+      },
+      "pageHits": {
+        "/": 6
+      },
+      "referrers": {
+        "Acesso direto": 5,
+        "ais-dev-cqivydlccqmeoeuwoqotiy-890297058567.us-east1.run.app": 1
+      },
+      "lastVisitAt": "2026-11-16T17:33:34.371Z"
+    }
+  },
+  "securityLogs": [
+    {
+      "id": "df1d3ffc-4dba-467e-b4de-9450fa212a30",
+      "timestamp": "2026-11-16T17:45:15.639Z",
+      "level": "info",
+      "category": "domain",
+      "uid": "local_8e933728410c4abc",
+      "ip": "127.0.0.1",
+      "message": "Site excluído pelo usuário: meuappteste-react.nh.com.br"
+    },
+    {
+      "id": "380ea36c-9117-4fcb-9fe5-9426e12a4f0c",
+      "timestamp": "2026-11-16T17:45:15.629Z",
+      "level": "info",
+      "category": "domain",
+      "uid": "local_8e933728410c4abc",
+      "ip": "127.0.0.1",
+      "message": "Site excluído pelo usuário: meuappteste.nh.com.br"
+    },
+    {
+      "id": "2c1924dd-49db-4578-a45f-428354b7a7ee",
+      "timestamp": "2026-11-16T17:45:15.574Z",
+      "level": "info",
+      "category": "upload",
+      "uid": "local_8e933728410c4abc",
+      "ip": "127.0.0.1",
+      "message": "Publicação v1 para meuappteste-react.nh.com.br (3 arquivos, 1094 bytes)."
+    },
+    {
+      "id": "d63b718a-c825-4573-b232-1a38bcd4c4a5",
+      "timestamp": "2026-11-16T17:45:15.470Z",
+      "level": "info",
+      "category": "domain",
+      "uid": "local_8e933728410c4abc",
+      "ip": "127.0.0.1",
+      "message": "Site criado: Site Teste React (meuappteste-react.nh.com.br)"
+    },
+    {
+      "id": "4437d3e6-2a28-4c96-bed1-b20f2a3176b6",
+      "timestamp": "2026-11-16T17:45:15.437Z",
+      "level": "info",
+      "category": "upload",
+      "uid": "local_8e933728410c4abc",
+      "ip": "127.0.0.1",
+      "message": "Publicação v1 para meuappteste.nh.com.br (2 arquivos, 151 bytes)."
+    },
+    {
+      "id": "1e0788be-1490-44ea-bfc2-02efaddd0e44",
+      "timestamp": "2026-11-16T17:45:15.386Z",
+      "level": "info",
+      "category": "domain",
+      "uid": "local_8e933728410c4abc",
+      "ip": "127.0.0.1",
+      "message": "Site criado: Site Teste HTML (meuappteste.nh.com.br)"
+    },
+    {
+      "id": "34ca3426-4b2d-4c3c-8bc3-2751c30690fd",
+      "timestamp": "2026-11-16T17:45:15.356Z",
+      "level": "info",
+      "category": "auth",
+      "uid": "local_8e933728410c4abc",
+      "ip": "127.0.0.1",
+      "message": "Nova conta criada com e-mail e senha: smoke_1794851115266@example.com"
+    },
+    {
+      "id": "61f54763-9a3a-44bf-9de0-a01894015a73",
+      "timestamp": "2026-11-16T17:34:30.777Z",
+      "level": "info",
+      "category": "upload",
+      "uid": "OrzxQG5cLkce6Lj82AuSa4Z04y42",
+      "ip": "45.171.210.53",
+      "message": "Análise de IA executada em web2app.nh.com.br (0 correção(ões) sugerida(s))."
+    },
+    {
+      "id": "5113bb63-374b-4d8f-ad4e-8bc0691c646f",
+      "timestamp": "2026-11-16T13:00:43.097Z",
+      "level": "info",
+      "category": "upload",
+      "uid": "OrzxQG5cLkce6Lj82AuSa4Z04y42",
+      "ip": "127.0.0.1",
+      "message": "Publicação v1 ativada em web2app.nh.com.br"
+    },
+    {
+      "id": "cc96ea9b-ae53-48fb-9453-35c4ddc61117",
+      "timestamp": "2026-11-16T12:51:29.234Z",
+      "level": "info",
+      "category": "domain",
+      "uid": "OrzxQG5cLkce6Lj82AuSa4Z04y42",
+      "ip": "45.171.210.54",
+      "message": "Site criado: Web2appee (web2app.100898)"
+    },
+    {
+      "id": "0ca70c92-f038-463d-84b0-0112caae2d77",
+      "timestamp": "2026-11-16T12:49:22.766Z",
+      "level": "info",
+      "category": "auth",
+      "uid": "OrzxQG5cLkce6Lj82AuSa4Z04y42",
+      "ip": "45.171.210.54",
+      "message": "Nova conta registrada: vdanilo884@gmail.com"
+    }
+  ],
+  "reports": [],
+  "announcements": [],
+  "localCredentials": {},
+  "sessionSecret": "f250057d96ac5164f5a8eb4c1e1f1e1bf70df9eb95e75ea23241dde7b441b5fe",
+  "limits": {
+    "maxSitesPerUser": 3,
+    "maxSiteSizeMb": 100,
+    "allowSignups": true,
+    "maintenanceMode": false,
+    "primaryDomain": "nh.com.br",
+    "updatedAt": "2026-11-16T12:44:27.580Z"
+  }
+}
